@@ -7,8 +7,7 @@ var jsFiles = {
   ],
   source: [
     'src/scripts/Utility.js',
-    'src/scripts/components/ComponentForm.jsx',
-    'src/scripts/components/Component.jsx',
+    'src/scripts/components/hello.jsx'
   ]
 };
 

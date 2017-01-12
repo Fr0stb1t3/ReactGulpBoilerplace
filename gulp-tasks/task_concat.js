@@ -8,8 +8,18 @@ var jsFiles = {
   ],
   source: [
     'src/scripts/Utility.js',
-    'src/scripts/components/ComponentForm.jsx',
-    'src/scripts/components/Component.jsx',
+    'src/scripts/components/hello.jsx'
+  ]
+};
+
+var jsFilesProd = {
+  vendor: [
+      'src/scripts/vendor/react.js',
+      'src/scripts/vendor/react-dom.js'
+  ],
+  source: [
+    'src/scripts/Utility.js',
+    'src/scripts/components/hello.jsx'
   ]
 };
 
@@ -25,6 +35,20 @@ gulp.task('concat', ['copy-react', 'copy-react-dom', 'eslint'], function() {
       compact: false
     }))
     .pipe(concat('app.js'))
+    .pipe(sourcemaps.write('./'))
+    .pipe(gulp.dest('build/js'));
+});
+
+gulp.task('concat-prod', ['copy-react', 'copy-react-dom', 'eslint'], function() {
+  return gulp.src(jsFilesProd.vendor.concat(jsFiles.source))
+    .pipe(sourcemaps.init())
+    .pipe(babel({
+      only: [
+        'src/scripts/components',
+      ],
+      compact: false
+    }))
+    .pipe(concat('app.prod.js'))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('build/js'));
 });

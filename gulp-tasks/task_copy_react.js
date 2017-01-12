@@ -24,6 +24,6 @@ gulp.task('copy-js-vendor', function() {
       'src/scripts/vendor/react.js',
       'src/scripts/vendor/react-dom.js'
     ])
-    .pipe(gulp.dest('build/js'));
+    .pipe(gulp.dest('build/js/vendor'));
 });
 /**/

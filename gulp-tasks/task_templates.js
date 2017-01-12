@@ -21,13 +21,34 @@ gulp.task('templates', function() {
     gutil.log(gutil.colors.red('BUILD WARNING:'), gutil.colors.yellow("Content JSON file is Missing, variables will remain empty if not defined in the gulp file"));
     contentFile = {};
   }
-  gulp.src("./src/templates/**/*.mustache")
+  gulp.src("./src/templates/index.mustache")
       .pipe(mustache(contentFile ,{},//contentFile
         {
           fristbox: "{{> graybox}}"
         }
       ))
       .pipe(rename({
+        extname: '.html'
+      }))
+      .pipe(gulp.dest("./build"));//.pipe(concat('index.html'))
+});
+gulp.task('templates-prod', function() {
+  var contentFile = "./content.json";
+  try {
+    var f = require("."+contentFile);
+    gutil.log(gutil.colors.green('BUILD NOTIFICATION:'), gutil.colors.yellow("Content JSON file is used for the mustache variables"));
+  } catch (error) {
+    gutil.log(gutil.colors.red('BUILD WARNING:'), gutil.colors.yellow("Content JSON file is Missing, variables will remain empty if not defined in the gulp file"));
+    contentFile = {};
+  }
+  gulp.src("./src/templates/index-prod.mustache")
+      .pipe(mustache(contentFile ,{},//contentFile
+        {
+          fristbox: "{{> graybox}}"
+        }
+      ))
+      .pipe(rename({
+        basename: "index",
         extname: '.html'
       }))
       .pipe(gulp.dest("./build"));//.pipe(concat('index.html'))
