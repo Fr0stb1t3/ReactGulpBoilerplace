@@ -1,7 +1,7 @@
 {
-  "name": "StashyBoilerplate",
+  "name": "ReactGulpBoilerplate",
   "version": "0.1.5",
-  "description": "Simple component boilerplate built over mustache,sass, gulp. It is suposed to be framework agnostic so code built with it can be adapted to NG 1/2, React, Web components or other component based stuff",
+  "description": "A simple(ish) boilerplate for React Projects. Partially based on the post 'Integrating React with gulp' from Jonathan Suh",
   "contributors": [
     {
       "name": "Antoni Atanasov",
@@ -10,12 +10,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Fr0stb1t3/StashyBoilerplate"
+    "url": "https://github.com/Fr0stb1t3/ReactBoilerplate"
   },
   "author": "Fr0stb1t3",
   "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified yet\" && exit 1"
   },
   "devDependencies": {
     "browser-sync": "^2.9.6",

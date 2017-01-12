@@ -1,15 +1,7 @@
 var gulp         = require('gulp');
 var eslint       = require('gulp-eslint');
+var jsFiles   = require("../jsfiles");
 
-var jsFiles = {
-  vendor: [
-
-  ],
-  source: [
-    'src/scripts/Utility.js',
-    'src/scripts/components/hello.jsx'
-  ]
-};
 
 // Lint JS/JSX files
 gulp.task('eslint', function() {

@@ -2,26 +2,11 @@ var gulp         = require('gulp');
 var babel        = require('gulp-babel');
 var concat       = require('gulp-concat');
 var sourcemaps   = require('gulp-sourcemaps');
+var jsFiles   = require("../jsfiles");
+var jsFilesProd   = require("../jsfiles-prod");
 
-var jsFiles = {
-  vendor: [
-  ],
-  source: [
-    'src/scripts/Utility.js',
-    'src/scripts/components/hello.jsx'
-  ]
-};
 
-var jsFilesProd = {
-  vendor: [
-      'src/scripts/vendor/react.js',
-      'src/scripts/vendor/react-dom.js'
-  ],
-  source: [
-    'src/scripts/Utility.js',
-    'src/scripts/components/hello.jsx'
-  ]
-};
+
 
 // Concatenate jsFiles.vendor and jsFiles.source into one JS file.
 // Run copy-react and eslint before concatenating
