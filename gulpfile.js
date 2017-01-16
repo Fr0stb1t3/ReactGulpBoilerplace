@@ -41,5 +41,5 @@ gulp.task('browsersync', function() {
   });
 });
 
-gulp.task('build', ['sass', 'copy-js-vendor', 'concat']);
+gulp.task('build', ['sass', 'webpack','templates']);
 gulp.task('default', ['build', 'browsersync', 'watch']);

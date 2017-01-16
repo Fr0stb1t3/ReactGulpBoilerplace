@@ -1,1 +1,0 @@
-{"version":3,"sources":["Utility.js","hello.jsx"],"names":[],"mappings":"AAAA;AACA;;;ACDC,QAAQ,CAAC,MAAM,CACX;;;;CAAsB,EACtB,QAAQ,CAAC,cAAc,CAAC,WAAW,CAAC,CACvC,CAAC","file":"app.js","sourcesContent":["console.log(\"Hello Console\");\n"," ReactDOM.render(\n     <h1>Hello, world!</h1>,\n     document.getElementById('app-point')\n );\n"]}

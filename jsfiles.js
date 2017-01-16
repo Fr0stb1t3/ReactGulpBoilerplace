@@ -4,7 +4,9 @@ function jsFiles(){
     ],
     source: [
       'src/scripts/Utility.js',
-      'src/scripts/components/hello.jsx'
+      'src/scripts/components/hello.jsx',
+      'src/scripts/components/internal.jsx',
+      'src/scripts/components/secondary.jsx',
     ]
   };
 };
