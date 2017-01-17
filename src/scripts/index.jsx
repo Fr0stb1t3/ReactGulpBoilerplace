@@ -5,7 +5,7 @@ import {render} from 'react-dom';
 class App extends React.Component {
   render () {
     return <div>
-        <p> Hello React!</p>
+        <h2> Hello React 2!</h2>
         <Internal/>
       </div>
     ;
