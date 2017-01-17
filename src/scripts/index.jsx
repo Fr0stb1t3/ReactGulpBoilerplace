@@ -1,15 +1,14 @@
 var React = require('react');
-var Internal = require('./components/internal.jsx');
-import {render} from 'react-dom';
+import ReactDOM from 'react-dom';
+import Internal from './components/internal.jsx';
 
 class App extends React.Component {
   render () {
-    return <div>
+    return (<div>
         <h2> Hello React 2!</h2>
         <Internal/>
-      </div>
-    ;
+      </div>) ;
   }
 }
 
-render(<App/>, document.getElementById('app-point'));
+ReactDOM.render(<App/>, document.getElementById('app-point'));

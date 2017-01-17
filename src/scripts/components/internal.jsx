@@ -1,15 +1,14 @@
-var React = require('react');
-import {render} from 'react-dom';
-var Secondary = require('./secondary.jsx');
+import React from "react";
 
 
 class Internal extends React.Component {
   constructor(props){
     super(props);
+    /*
     var timeVar = new Date().toLocaleTimeString();
     this.state = {
       time: timeVar
-    };
+    };*/
   }
 
   tick(){
@@ -22,19 +21,19 @@ class Internal extends React.Component {
   }
 
   componentWillUnmount() {
-    clearInterval(this.timeout);
+    //clearInterval(this.timeout);
   }
   componentDidMount(){
+    /*
     this.timeout = setInterval(
      () => this.tick()
     , 1000);
+    */
   }
   render () {
-    return <div>
+    return (<div>
       <h3>Hello, DOM!</h3>
-      <h4>It is alive {this.state.time}.</h4>
-      <Secondary/>
-    </div>;
+    </div>);
   }
 }
 

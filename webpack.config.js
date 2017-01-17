@@ -9,7 +9,12 @@ var config = {
       {
         test : /\.jsx?/,
         include : APP_DIR,
-        loader : 'babel'
+        loader : 'babel',
+        query: {
+            // https://github.com/babel/babel-loader#options
+            cacheDirectory: true,
+            presets: ['es2015', 'react','stage-0']
+        }
       }
     ]
   },
