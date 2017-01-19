@@ -1,11 +1,11 @@
 var React = require('react');
-import store from '../store.js';
+import store from '../store/store.js';
 
 
 class ReduxComponent extends React.Component {
   ageInput: int
   componentDidMount(){
-    store.subscribe( ()=>{
+    store.subscribe( ()=> {
         console.log(store);
         console.log("Store changed", store.getState());
     } );

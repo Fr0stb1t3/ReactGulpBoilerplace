@@ -10,5 +10,6 @@ class App extends React.Component {
       </div>) ;
   }
 }
-
+///test
+console.log("Hot potato");
 ReactDOM.render(<App/>, document.getElementById('app-point'));
